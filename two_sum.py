@@ -1,9 +1,15 @@
 def twoSum(nums, target):
-    for n in range(len(nums)):
-        for i in range(n, len(nums)):
-            if(nums[n] + nums[i] == target):
-                    return [n,i]
-            
+    hash = {}
+    for i in range(len(nums)):
+        print(hash)
+        print(target - nums[i])
+        y = target - nums[i]
+        if (y in hash):
+            return ([i, hash[y]])
+        else:
+            hash[nums[i]] = i
+        
+        #print(hash[i])
         
 def main():
     nums = [2,7,11,15]
